@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bài tập tính điểm trung bình</title>
+        <style>
+            button {
+                align-items: center;
+                width: 20%;
+                background-color: aqua;
+            }
+        </style>
+    </head>
+<body>
+    <button type="button" onclick="bai1()">bai 1</button><br/><br/>
+    <button type="button" onclick="bai2()">bai 2</button><br/><br/>
+    <button type="button" onclick="bai3()">bai 3</button><br/><br/>
+    <button type="button" onclick="bai4()">bai 4</button><br/><br/>
+</body>
+<script>
+
+    function bai1() {
+        let vatly = prompt("Nhập điểm vật lý:");
+        let hoahoc = prompt("Nhập điểm hóa học :");
+        let sinhhoc = prompt("Nhập điểm sinh học:");
+        let vl = parseInt(vatly);
+        let hh = parseInt(hoahoc);
+        let sh = parseInt(sinhhoc);
+        let sum = vl + hh + sh;
+        let diemtb = (vl+hh+sh)/3;
+        document.write("Tổng điểm là :" + sum);
+        document.write('<br>');
+        document.write("Điểm trung bình là :" + diemtb);
+    }
+
+    function bai2() {
+        let doC = prompt("Nhập độ C")
+        let C = parseInt(doC)
+        let F = (9*C/5) + 32;
+        document.write("Độ F là:" + F);
+    }
+    function bai3() {
+        let bankinh = prompt("Nhập bán kính hình tròn");
+        let R = parseInt(bankinh);
+        
+        let chuvi = 2*R*3.14;
+        
+        document.write("Chu vi hình tròn là: " + chuvi);
+    }
+    function bai4() {
+        let bankinh = prompt("Nhập bán kính hình tròn");
+        let R = parseInt(bankinh);
+        let dientich = (R*R*3.14);
+        document.write("Diện tích hình tròn là :" + dientich);
+        
+    }
+    
+</script>    
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color:cyan;
+            text-align: center;
+            width: 20%;
+            border: 0;
+            
+        }
+    </style>
+</head>
+<body>
+    <button id="bai1" onclick="bai1()">Bài 1</button><br/><br/>
+    <button id="bai2" onclick="bai2()">Bài 2</button><br/><br/>
+    <button id="bai3" onclick="bai3()">Bài 3</button><br/><br/>
+    <script>
+        function bai1() {
+        let a = 10;
+        let b =20.5;
+        let c = true;
+        let s = "hà nội";
+
+        document.write('a = ' + a + '<br/>');
+        document.write('b = ' + b + '<br/>');
+        document.write('c = ' + c + '<br/>');
+        document.write('s = ' + s + '<br/>');
+        }
+        function bai2() {
+            let width = 20;
+            let hight = 10;
+            let area = width*hight;
+            document.write('Area = '+area);
+        }
+
+        function bai3() {
+            let a = prompt("nhap so a");
+            let b = prompt("nhap so b");
+            if(a % b == 0)
+                alert(a+" la boi cua " +b);
+            else 
+                alert(a + " khong la boi cua " + b);
+        }
+
+    </script>
+</body>
+</html>

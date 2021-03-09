@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Bài tập ứng dụng máy tính.
+        </title>
+    </head>
+<body>
+    <h1>Caculartor</h1>
+    <form >
+        <input id="cho1" type="text"> &nbsp;
+        <input id="cho2" type="text">&nbsp;
+        <input type="button"value="=">&nbsp;
+        <input type="button" id="ketqua" value="" width="50px" height="50px"><br><br>
+        <button type="button" onclick="click1('+')">Addition(+)</button>
+        <button type="button" onclick="click1('-')">Subtraction(-)</button>
+        <button type="button" onclick="click1('*')">Multiplication(X)</button>
+        <button type="button" onclick="click1('/')">Division(/)</button><br><br><br>
+        
+    </form>
+</body>
+
+<script>
+    function click1(kytu) {
+        let value1 = document.getElementById('cho1').value;
+        let value2 = document.getElementById('cho2').value;
+        
+        let kq = eval( value1 + kytu + value2);
+        ketqua.value = kq;
+        
+    }
+</script>
+
+<!-- <script>
+        function click1() {
+            let o1 = document.getElementById("cho1").value;
+            let o2 = document.getElementById("cho2").value;
+            let A = parseInt(o1);
+            let B = parseInt(o2);
+            let cong = A + B;
+            document.getElementById("ketqua").innerHTML = "Result Addition : " + cong;
+        }
+        function click2() {
+            let o1 = document.getElementById("cho1").value;
+            let o2 = document.getElementById("cho2").value;
+            let A = parseInt(o1);
+            let B = parseInt(o2);
+            let tru = A - B;
+            document.getElementById("ketqua").innerHTML = "Result Subtraction : " + tru;
+        }
+        function click3() {
+            let o1 = document.getElementById("cho1").value;
+            let o2 = document.getElementById("cho2").value;
+            let A = parseInt(o1);
+            let B = parseInt(o2);
+            let nhan = A*B;
+            document.getElementById("ketqua").innerHTML = "Result Multiplication : " + nhan;
+        }
+        function click4() {
+            let o1 = document.getElementById("cho1").value;
+            let o2 = document.getElementById("cho2").value;
+            let A = parseInt(o1);
+            let B = parseInt(o2);
+            let chia = A/B;
+            document.getElementById("ketqua").innerHTML = "Result Division : " + chia;
+        }
+</script>     -->
+</html>

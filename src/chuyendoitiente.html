@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="sotien">Nhập số tiền</label>
+    <input type="number" id="sotien"> 
+
+    <select name="tiente1" id="tien1">
+        <option value="1">Việt Nam</option>
+        <option value="2">Hoa kỳ</option>
+    </select>
+
+    <select name="tiente2" id="tien2">
+        <option value="1">Việt Nam</option>
+        <option value="2">Hoa kỳ</option>
+    </select><br/><br/>
+    <button id = "chuyendoi" value="ok" onclick="chuyendoi()" >chuyển đổi</button>
+    
+    <div id = "soc1"></div>
+
+</body>
+<script>
+    
+    function convert() {
+        let so1 = document.getElementById("tien1").value ;
+        let so2 = document.getElementById("tien2").value;
+        let sotien = document.getElementById("sotien").value;
+        let result = 0;
+        if(so1 != so2) {
+            result = so1 > so2 ? UsdtoVn(sotien):VntoUsd(sotien);
+            
+        }
+        else 
+            result = sotien;
+        
+            soc1.innerHTML = "Result :" + result;
+            
+    }  
+    function chuyendoi() {
+        let clickon = document.getElementById("chuyendoi");
+        clickon.addEventListener("click",convert);
+    }
+
+    function VntoUsd(vnd) {
+        return vnd/22000;
+    }
+    function UsdtoVn(usd) {
+        return usd*22000;
+    }
+</script>
+</html>
