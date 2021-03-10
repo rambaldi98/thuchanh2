@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="button" onclick="bai1()" value="bai1"> <br/><br>
+    <input type="button" onclick="bai2()" value="bai2">
+
+
+    <script>
+        function bai1() {
+            let a = +prompt("nhap so thu nhat ");
+            let b = +prompt("nhap so thu hai ");
+            let result = (a+b) > 4 ? 'Below':'Over';
+            alert(result);
+        }
+
+        function bai2() {
+            let user = prompt('nhap user');
+            let message = (user == 'Employee')?
+                    'hello': 
+                (user == 'Director')?
+                    'Greetings' : 
+                (user == '') ?
+                    'No login':
+                '';
+            alert(message);
+        }
+    </script>
+</body>
+</html>
