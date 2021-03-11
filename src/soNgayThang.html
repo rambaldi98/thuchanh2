@@ -9,12 +9,12 @@
 <body>
     <input type="number" id="month" value="0"> &nbsp;
     <button onclick="checkNow()">Tính số ngày</button> <br><br>
-    <h2 id="display" ></h2>
+    <h1 id="display" ></h1>
 
     <script>
 
         function checkDay(value) {
-            if (value > 1 && value < 12) {
+            if (value >= 1 && value <= 12) {
                 return value;
                 
             }
@@ -39,15 +39,15 @@
                 case 10: 
                 case 12: {
                     
-                    document.getElementById('display').innerHTML = 'tháng ' + value + ' có 31 ngày';
+                    document.getElementById('display').innerText =  'tháng '  + value + ' có 31 ngày';
                     break;
                 }
                 case 2: {
-                    document.getElementById('display').innerHTML = 'tháng ' + value + ' có 28 hoặc 29 ngày';
+                    document.getElementById('display').innerText = 'tháng ' + value + ' có 28 hoặc 29 ngày';
                     break;
                 }
                 default:
-                    document.getElementById('display').innerHTML= 'tháng ' + value + ' có 30 ngày';
+                    document.getElementById('display').innerText= 'tháng ' + value + ' có 30 ngày';
 
             }
         }
@@ -57,6 +57,7 @@
             
             //display.value = "dghjgk";
             let thang = parseInt( document.getElementById('month').value);
+            // document.getElementById('display').innerHTML = '<h1> dien cong</h1>';
             // alert( checkDay(thang));
             checkMonth(checkDay(thang));
         }
