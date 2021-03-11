@@ -1,10 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Document</title>
 </head>
-<body>
-    <img src="../img/nobita.png" alt="nobita.png" style="position: absolute;left: 0;top: 0;" height="100" width="80"/>
+<body onload = "docReady()">
+    <img 
+        src="../img/nobita.png" 
+        alt="helo"
+        style="position: absolute; left: 0; top: 0;" 
+        height="200" 
+        width="80"
+        id="nobita_img" />
+
+
+    <script>
+
+
+        function moveSelection(evt) {
+                    //alert(evt.keyCode);
+                        // alert(evt.keyCode);
+                    switch (evt.keyCode) {
+                        case 37 :
+                            leftImg();
+                            break;
+                        case 39 :
+                            rightImg();
+                            break;
+                        case 38 :
+                            upImg();
+                            break;
+                        case 40 :
+                            dowImg();
+                            break;
+            }
+                
+        }
+
+        function docReady() {
+            window.addEventListener('keydown',moveSelection);
+        }
+
+
+        function upImg() {
+            let element = document.getElementById('nobita_img');
+            element.style.top = parseInt(element.style.top) - 50 + 'px';
+
+        }
+        function dowImg() {
+            let element = document.getElementById('nobita_img');
+            element.style.top = parseInt(element.style.top) + 50 + 'px';
+        }
+
+        function leftImg() {
+            let element = document.getElementById('nobita_img');
+            element.style.left = parseInt(element.style.left) - 50 + 'px';
+        }
+
+        function rightImg() {
+            let element = document.getElementById('nobita_img');
+            element.style.left = parseInt(element.style.left) + 50 + 'px';
+        }
+  
+ 
+    </script>
 </body>
 </html>
