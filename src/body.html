@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>body</title>
+</head>
+<body>
+    <h2>Chỉ số BMI </h2>
+    <label for="weith">Nhập cân nặng </label> &nbsp;
+    <input type="text" id="weith"> <br><br>
+    <label for="heigh">Nhập chiều cao</label> &nbsp;
+    <input type="text" id="heigh"> <br><br>
+
+    <button onclick="ketQua()">Tính BMI</button> &nbsp;
+    <input type="text" id = "ketqua">
+
+
+    <script>
+        function ketQua () {
+            let weith = parseFloat(document.getElementById('weith').value);
+            let heigh = parseFloat(document.getElementById('heigh').value);
+            let value = weith/(Math.pow(heigh,2));
+            
+            if(value < 18.5) {
+                ketqua.value = "Underweight";
+            }
+            else if(value < 25) {
+                ketqua.value = "Normal";
+            }
+            else if(value < 30)  {
+                ketqua.value = "Overweight";
+            }
+            else 
+                ketqua.value = "Obese";
+            
+        }
+    </script>
+</body>
+</html>
