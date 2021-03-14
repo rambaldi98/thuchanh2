@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodFastCheap</title>
+    <style>
+        input {
+    
+            
+           cursor: pointer;
+           position: relative;
+           
+           height: 50px;
+           width: 50px;
+           border-radius: 100%;
+            
+            transform: translate(50px);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><h1>Good </h1></td>
+            <td><input type="checkbox" id="good" onclick="checkGood()"></td>
+        </tr>
+        <tr>
+            <td><h1>Fast</h1></td>
+            <td><input type="checkbox" id="fast" onclick="checkFast()"></td>
+        </tr>
+
+        <tr>
+            <td><h1>Cheap</h1></td>
+            <td><input type="checkbox" id="cheap" onclick="checkCheap()"></td>
+        </tr>
+    </table>
+    
+    
+   <script>
+       good = document.getElementById('good');
+       fast = document.getElementById('fast');
+       cheap = document.getElementById('cheap');
+       good.checked = false;
+       fast.checked = false;
+       cheap.checked = false;
+
+       function checkGood() {
+            if(fast.checked && cheap.checked)
+            fast.checked = false;
+       }
+
+       function checkFast() {
+            if(good.checked && cheap.checked)
+            cheap.checked = false;
+       }
+
+       function checkCheap() {
+            if(good.checked && fast.checked)
+            good.checked = false;
+       }
+
+   </script>
+    
+</body>
+</html>
