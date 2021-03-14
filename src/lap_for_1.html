@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thuc hanh 1</title>
+    <style>
+        button{
+            padding: 20px;
+            margin-bottom: 10px;
+            /* background-color:blue; */
+           
+        }
+        button:hover {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="bai1()">Bai 1</button><br/>
+    <button onclick="bai2()">Bai 2</button><br/>
+    <p id="demo"></p>
+    <script>
+        function bai1() {
+            let a = 0;
+            let text = '';
+            do {
+                a = parseInt(prompt('nhap so lan lap'));
+            
+            } while(  a < 0) ;
+            
+            while(a >0) {
+               text+= 'the number is ' + a + '\n';
+                a--;
+            }
+            document.getElementById('demo').innerText = text;
+            
+        }
+
+        function bai2() {
+            let a = parseInt(prompt('nhap so '));
+            let sum  = 0;
+            while(a > 0) {
+                sum += a;
+                a--;
+            }
+            document.getElementById('demo').innerText = 'tong = ' + sum;
+        }
+    </script>
+</body>
+</html>
