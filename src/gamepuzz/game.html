@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gamepuzz</title>
+    <style>
+        img {
+            
+            margin-left: 30%;
+            padding: 0%;
+            
+        }
+        h2{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <img src="./img/panda1.jpg" height="160" width="800"  id="img1" onclick="click1(0)"><br/>
+    <img src="./img/cat2.jpg"   height="160" width="800"  id="img2" onclick="click1(1)"><br/>
+    <img src="./img/panda3.jpg" height="160" width="800"  id="img3" onclick="click1(2)"><br/>
+    <img src="./img/panda4.jpg" height="160" width="800"  id="img4" onclick="click1(3)"><br/>
+    <img src="./img/panda5.jpg" height="160" width="800"  id="img5" onclick="click1(4)"><br/>
+
+    <h2 id="ketQua"></h2>
+    
+
+    <script>
+        // var dongVat = [
+        //                 [ './img/cat1.jpg' , './img/cat2.jpg' , './img/cat3.jpg' , './img/cat4.jpg' , './img/cat5.jpg'],
+        //                 [ './img/panda1.jpg' , './img/panda2.jpg' , './img/panda3.jpg' , './img/panda4.jpg' , './img/panda5.jpg'],
+        //                 [ './img/monkey1.jpg' , './img/monkey2.jpg' , './img/monkey3.jpg' , './img/monkey4.jpg' , './img/monkey5.jpg']
+        // ];
+        
+        let i = 0;
+        let maxKey = 2;
+        let minKey = 0;
+        let max = 5;
+        let min = 0;
+        let count = 0;
+
+        var dongVat = [
+            ['img/cat1.jpg' , 'img/panda1.jpg' , 'img/monkey1.jpg'],
+            ['img/cat2.jpg' , 'img/panda2.jpg' , 'img/monkey2.jpg'],
+            ['img/cat3.jpg' , 'img/panda3.jpg' , 'img/monkey3.jpg'],
+            ['img/cat4.jpg' , 'img/panda4.jpg' , 'img/monkey4.jpg'],
+            ['img/cat5.jpg' , 'img/panda5.jpg' , 'img/monkey5.jpg'],
+        ];
+
+        let display1 = document.getElementById('img1');
+        let display2 = document.getElementById('img2');
+        let display3 = document.getElementById('img3');
+        let display4 = document.getElementById('img4');
+        let display5 = document.getElementById('img5');
+
+        var display = [display1, display2, display3, display4, display5];
+        var mang = ['img/cat1.jpg','img/cat2.jpg','img/cat3.jpg','img/cat4.jpg','img/cat5.jpg'];
+        
+       function click1(kytu) {
+            i++;
+            if(i > maxKey) i = minKey;
+            
+            display[kytu].src = dongVat[kytu][i];
+
+
+            if(check(kytu))
+               document.getElementById('ketQua').innerText = 'chúc mừng' ;
+            else 
+                document.getElementById('ketQua').innerText = '' ;
+            // alert(display[i].src);
+            // alert(display[i].src);
+            //console.log(display);
+            // display[kytu].src = dongVat[kytu];
+            // console.log( display[kytu].src.split('/src/gamepuzz/')[1]);
+        
+            
+            // alert (display[kytu].src);
+
+            // if(display[kytu].src == dongVat[kytu][i]) 
+            
+          
+       }
+       function check(kytu){
+           let checkmang = [];
+           
+           for(let i = min; i < max; i ++) {
+                checkmang[i] = display[i].src.split('/src/gamepuzz/')[1];
+                
+                if(checkmang[i] == mang[i]) {
+                   
+                    count ++;
+                }
+                
+           }
+           
+           if(count == 5) 
+                return 1;
+           else 
+           {
+            count = 0;
+            return 0;
+           }
+                
+               
+           
+        
+       }
+        
+        
+        
+        
+    </script>
+</body>
+
+
+</html>
