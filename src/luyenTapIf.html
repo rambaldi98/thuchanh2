@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="bai1()">Bài 1</button> &nbsp;&nbsp;
+    <button onclick="bai2()">Bài 2</button> &nbsp;&nbsp;
+    <button onclick="bai3()">Bài 3</button> &nbsp;&nbsp;
+    <button onclick="bai4()">Bài 4</button> &nbsp;&nbsp;
+    <button onclick="bai5()">Bài 5</button> &nbsp;&nbsp;
+    <button onclick="bai6()">Bài 6</button> &nbsp;&nbsp;
+    <button onclick="bai7()">Bài 7</button> &nbsp;&nbsp;<br>
+
+
+    <script>
+        
+        function bai1() {
+            let a = parseInt( prompt('nhap a '));
+            let b = parseInt( prompt('nhap b'));
+            alert(a%b==0?'a chia het cho b':'a khong chia het cho b');
+        }
+        function bai2() {
+            let a = parseInt(prompt('nhap so tuoi '));
+            alert(a==16?'du dieu kien hoc lop 10':'khong du dieu kien hoc lop 10');
+        }
+
+        function bai3() {
+            let a = parseFloat(prompt('nhap so nguyen a'));
+            if(a % 1 == 0)
+                if(a > 0) 
+                    alert( a +' lon hon 0');
+                else if(a == 0)
+                    alert(a + ' bang 0');
+                else 
+                    alert(a + ' nho hon 0');
+            else 
+                alert('a khong la so nguyen');
+
+        }
+
+        function bai4() {
+            let a = prompt('nhap so nguyen a');
+            let b = prompt('nhap so nguyen b');
+            let c = prompt('nhap so nguyen c');
+
+            if(a >b && a > c)
+                alert(a + ' la so lon nhat');
+            else 
+                if(b > c)
+                    alert(b + ' la so lon nhat');
+                else 
+                    alert(c + ' la so lon nhat');
+        }
+
+    function bai5() {
+        let diemtb;
+        do{
+             diemtb = parseFloat(prompt('nhap diem trung binh cua hoc sinh'));
+        } while(diemtb < 0 || diemtb > 10 );
+
+        if(diemtb < 5)
+            alert('hoc sinh yeu');
+        else if(diemtb < 7)
+            alert('hoc sinh trung binh')
+        else if(diemtb < 8.5)
+            alert('hoc sinh kha')
+        else
+            alert('hoc sinh gioi');
+    }
+  
+    function bai6() {
+        let a;
+        do{
+         a = parseFloat( prompt('nhap doanh so ban hang %'));
+        } while(a < 0 || a >100)
+
+        if(a < 5)
+            alert('hoa hong 5%');
+        else if(a <10) 
+            alert('hoa hong 10%');
+        else 
+            alert('hoa hong '+ a + '%');
+        // let b = prompt('nhap so nguyen b');00
+        // alert(add(a,b))
+    }
+
+    function bai7() {
+        let a;
+        do{
+            a = parseFloat(prompt('nhap so tieu thu dien thoai '));
+        } while(a < 0);
+        
+        alert('so tien phai tra = ' + a*1650 + 'VND');
+    }
+    </script>
+   
+</body>
+
+
+</html>
