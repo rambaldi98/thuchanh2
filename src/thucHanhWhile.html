@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuc Hanh While</title>
+    <style>
+      
+        button {
+           
+            margin-left: 20%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: red;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="bai1()">Bai 1</button><br>
+    <button onclick="bai2()">Bai 2</button><br>
+
+    <hr id="demo"></hr>
+
+    <script>
+        function bai1() {
+            let a = 0;
+            let b = 0;
+            while(b != -1) {
+                b = parseFloat(prompt('nhap so '));
+                a += b;
+            }
+            document.getElementById('demo').innerText = 'tong so vua nhap = ' + a;
+        }
+
+        function bai2() {
+            let i = 1;
+            while (i < 100) {
+                document.write('<hr width = ' + i + '%>');
+                i++;
+            }
+        }
+    </script>
+</body>
+</html>
