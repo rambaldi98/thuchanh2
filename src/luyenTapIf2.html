@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyen Tap 2</title>
+    <style>
+        button{
+            padding: 20px;
+            margin-bottom: 10px;
+            /* background-color:blue; */
+           
+        }
+        button:hover {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="bai1()">Bai 1</button><br/>
+    <button onclick="bai2()">Bai 2</button><br/>
+    <button onclick="bai3()">Bai 3</button><br/>
+    <button onclick="bai4()">Bai 4</button><br/>
+    <button onclick="bai5()">Bai 5</button><br/>
+    <button onclick="bai6()">Bai 6</button><br/>
+    <button onclick="bai7()">Bai 7</button><br/>
+    <button onclick="bai8()">Bai 8</button><br/>
+    <button onclick="bai9()">Bai 9</button><br/>
+    <button onclick="bai10()">Bai 10</button><br/>
+    <button onclick="bai11()">Bai 11</button><br/>
+    <button onclick="bai12()">Bai 12</button><br/>
+</body>
+
+<script>
+    function bai1(){
+        // chuyen doi nhiet do C sang F
+        let a = parseFloat(prompt('nhap nhiet do C'));
+        alert( a*(9/5) +32 + 'do F');
+    }
+
+    function bai2() {
+        // chuuyen doi met sang feet
+        let ft = parseFloat(prompt('nhap so m can chyen doi'));
+        alert(ft*3.2808 + ' feet');
+    }
+    function bai3() {
+        // tinh dien tich hinh vuoong khi biet canh a
+        let a = parseFloat(prompt('nhap canh hinh vuong'));
+        alert(a*a + ' la dien tich hinh vuong');
+    }
+
+    function bai4() {
+        //tinh dien tich hinh chu nhat khi biet anh a,b
+        let a = parseFloat(prompt('nhap chieu dai'));
+        let b = parseFloat(prompt('nhap chieu rong'));
+        alert(a*b + ' la dien tich hinh chu nhat vua nhap');
+    }
+
+    function bai5() {
+        // dien tich tam giac vuong khi biest a ,b;
+        let a = parseFloat(prompt('nhap a'));
+        let b = parseFloat(prompt('nhap b'));
+        alert(1/2*a*b + ' la dien tich tam giac ');
+    }
+
+    function bai6() {
+        // giai phuong trinh bac 1
+        let a = parseFloat(prompt('nhap he so a'));
+        let b = parseFloat(prompt('nhap he so b'));
+
+        if(a == 0) {
+            if(b == 0)
+                alert('phuong trinh vo so nghiem');
+            else 
+                alert('phuong trinh vo nghiem');    
+        }
+        else{
+            alert('x = ' + -b/a);
+        }
+    }
+
+    function bai7() {
+        //giai phuong trinh bac 2;
+        let a = parseFloat(prompt('nhap he so a'));
+        let b = parseFloat(prompt('nhap he so b'));
+        let c = parseFloat(prompt('nhap he so c'));
+
+        if(a == 0) 
+            alert('khong phai phuong trinh bac 2');
+        else {
+            let dental = b*b - 4*a*c;
+            if(dental == 0) {
+                alert('phuong trinh co nghiem kep x = ' + -b/(2*a));
+            }
+            else if(dental < 0 )
+                alert('phuong trinh vo nghiem');
+            else{
+                let x1 = (-b+Math.sqrt(dental))*2*a;
+                let x2 = (-b-Math.sqrt(dental))*2*a;
+                alert('nghiem phuong trinh ax2+bx+c la X1 = '+x1+ 'X2 = '+x2 );
+            }
+        }
+
+    }
+
+    function bai8() {
+        // kiem tra tuoi
+        let a ; 
+        do {
+                a = parseInt(prompt('nhap so tuoi'));
+        }while(a < 0 || a > 120);
+        alert(a);
+    }
+
+    function bai9() {
+        // kiem tra so thuc cua mot tam giac
+        let a,b,c;
+        do {
+            a = parseFloat(prompt('nhap canh a'));
+            b = parseFloat(prompt('nhap canh b'));
+            c = parseFloat(prompt('nhap canh c'));
+            
+        }while (a<=0||b<=0||c<=0||(a+b)<c||(b+c)<a||(c+a)<b);
+        alert('canh cua tam giac la : ' + a +' '+ b+' ' + c);
+    }
+
+    function bai10() {
+        ;
+    }
+    function bai11() {
+        ;
+    }
+    function bai12() {
+        ;
+    }
+
+</script>
+</html>
