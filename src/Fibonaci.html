@@ -9,10 +9,11 @@
 <body>
     <script>
         function bai1(so1,so2){
-            let a = new Array[] ;
+            // in ra so tu so1 sang so 2
+            let a = [];
             let i = so1;
             for( i; i < so2; i++) {
-                a.add
+                a[i-so1] = i;
             }
             console.log(a);
         }
@@ -89,6 +90,48 @@
             }
             return sum;
         }
+
+        function bai7(gh1,gh2,sochia1,sochia2) {
+            // chia cho 3 fizz
+            // chia cho 5 la buzz
+            // chia cho 3 va 5 la fizzbuzz
+            let i = gh1;
+            let a = [];
+            while(i < gh2) {
+                if(i % (sochia1*sochia2) == 0) {
+                    a[i - gh1] = 'FizzBuzz';
+                }
+                else if( i  % sochia1 == 0) {
+                    a[i - gh1] = 'Fizz';
+                }
+                else if(i % sochia2 == 0) {
+                    a[i - gh1] = 'Buzz';
+                }
+                else 
+                    a[i-gh1] = i;
+                i++;
+            }
+            console.log(a);
+
+        }
+
+        function bai8(a,b) {
+            // game doan so
+            if( a > b) 
+                a = b + ((b = a),0);
+            let random = Math.floor(Math.random())*(b - a + 1) + a;
+            let nhap;
+            do {
+                 nhap = parseInt(prompt('nhap du doan'));
+                if(nhap == random) {
+                    console.log('du doan dung');
+                    break;
+                }
+                else 
+                    console.log('du doan lai')
+            } while(random!= nhap);
+        }
+        
     </script>
 </body>
 </html>
