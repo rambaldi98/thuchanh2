@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function bai1(so1,so2){
+            let a = new Array[] ;
+            let i = so1;
+            for( i; i < so2; i++) {
+                a.add
+            }
+            console.log(a);
+        }
+        function Fibonacy(so) {
+            // bai 3 hien thi so trong  day fibonacy 
+            let a = [1,1];
+            if(so <= 1)
+                return a[so];
+            else {
+            let i = 2;
+            while(i < so) {
+                a[i] = a[i-1] + a[i-2];
+                i++;
+            }
+            console.log(a);
+        }
+        }
+
+        function timSoChiaHetNhoNhat(sochia) {
+            // bai 4tim so chia nho nhat trong day fibonacy
+            
+            let a = [1,1];
+            let i = 2;
+            let so = i;
+            while(i <= so) {
+                a[i] = a[i-1] + a[i-2];
+                if(a[i] % sochia == 0) {
+                    console.log(a[i] +' '+ i);
+
+                }
+                else so++;
+                i++;
+            }
+            
+        }
+
+        function tongSoDau(so) {
+            //bai 5 tong so dau tien trong day fibonacy
+            let a = [1,1];
+            let sum ;
+            if(so <= 1)
+                return sum = a[so];
+            else{
+                sum = 2;
+                let i = 2;
+                while(i < so) {
+                    a[i] = a[i-1] + a[i-2];
+                    sum += a[i];
+                    i++;
+                }
+                console.log(sum);
+            }
+        }
+
+
+        function STNChiaHet(soluong,sochia) {
+            // bai 6
+            let sum = 0;
+            let i = 1;
+            let dem = 1;
+            if(sochia <= 0 )
+                return false;
+            else {
+                
+                while(i <= soluong){
+                    if(dem % sochia == 0){
+                        sum += dem;
+                        i++;
+                        dem++;
+                    }
+                    else 
+                        dem ++;  
+                }
+            }
+            return sum;
+        }
+    </script>
+</body>
+</html>
